@@ -1,0 +1,18 @@
+{
+  "name": "mds/collivery",
+  "description": "MDS Collivery Shipping",
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "require": {
+    "php": "~5.5.0|~5.6.0",
+    "magento/magento-composer-installer": "*"
+  },
+  "extra": {
+    "map": [
+      [
+        "*",
+        "MDS/Collivery"
+      ]
+    ]
+  }
+}

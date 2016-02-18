@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/system_file.xsd">
+    <system>
+        <section id="carriers">
+            <group id="mds_collivery" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Collivery</label>
+                <comment>
+                    <![CDATA[<a href="https://collivery.net/" target="_blank">Click here to know more about Collivery</a>]]>
+                </comment>
+                <!--
+                    The following fields are available
+                    to modify in the admin panel.
+                    The values are saved in the
+                    database.
+
+                    This shipping carrier abstract checks
+                    this value to determine whether
+                    the carrier should be shown.
+                -->
+                <field id="active" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <!--
+                    This value can be used to specify a
+                    custom title for our method.
+                -->
+                <field id="title" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Title</label>
+                </field>
+                <!--
+                    The sort order is used in Magento
+                    to determine what order the carrier
+                    will appear in relative to the
+                    other carriers available.
+                -->
+                <field id="sort_order" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Sort Order</label>
+                </field>
+                <!--
+                    This value is used to specify whether
+                    the carrier is available only for
+                    specific countries or all countries
+                    available in the current Magento
+                    installation.
+                -->
+                <field id="allowspecific" translate="label" type="allowspecific" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Ship to Applicable Countries</label>
+                    <source_model>Magento\Shipping\Model\Config\Source\Allspecificcountries</source_model>
+                </field>
+                <!--
+                    If 'specific countries' is chosen
+                    in the previous option, then this field
+                    allows the administrator to specify
+                    which specific countries this carrier
+                    should be available for.
+                -->
+                <field id="specificcountry" translate="label" type="multiselect" sortOrder="51" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Ship to Specific Countries</label>
+                    <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                </field>
+
+            </group>
+        </section>
+    </system>
+</config>

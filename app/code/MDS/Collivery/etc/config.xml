@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Magento/Core/etc/config.xsd">
+    <default>
+        <carriers>
+            <mds_collivery>
+                <active>1</active>
+                <model>MDS\Collivery\Model\Carrier</model>
+                <title>MDS Collivery</title>
+                <api_key backend_model="Magento\Config\Model\Config\Backend\Encrypted" />
+                <sort_order>10</sort_order>
+                <sallowspecific>0</sallowspecific>
+            </mds_collivery>
+        </carriers>
+    </default>
+</config>
